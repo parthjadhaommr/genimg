@@ -17,6 +17,7 @@ export default antfu(
     {
         ignores: [
             ".vscode",
+            ".github/workflow/*.yaml", // ignore GitHub Actions files
             "node_modules",
             "dist",
             "build",

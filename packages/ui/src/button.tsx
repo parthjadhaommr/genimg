@@ -9,7 +9,12 @@ type ButtonProps = {
   type?: ButtonHTMLAttributes<HTMLButtonElement>["type"]; // 'button' | 'submit' | 'reset'
 };
 
-export function Button({ children, className, appName, type = "button" }: ButtonProps) {
+export function Button({
+  children,
+  className,
+  appName,
+  type = "button",
+}: ButtonProps) {
   return (
     <button
       type={type}

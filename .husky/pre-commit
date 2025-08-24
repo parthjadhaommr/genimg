@@ -1,3 +1,2 @@
-bun run lint
-bun run lint:fix
-bun run check-types
+#!/bin/sh
+bunx lint-staged || ./node_modules/.bin/lint-staged
