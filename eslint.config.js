@@ -17,8 +17,11 @@ export default antfu(
     {
         ignores: [
             ".vscode",
-            ".github/workflow/*.yaml", // ignore GitHub Actions files
+            ".github/workflow/*.yaml",
             "node_modules",
+            "packages/db/prisma/migrations/**",
+            "packages/db/prisma/migration_lock.toml",
+            "packages/db/generated/prisma/**",
             "dist",
             "build",
             ".next",
@@ -51,6 +54,8 @@ export default antfu(
             // backend-specific overrides
             "no-alert": "off", // alert is not used in backend anyway
             "next/no-html-link-for-pages": "off", // not relevant for backend
+            "node/no-process-env": "off",
+            "no-console": "off",
         },
     },
     {
